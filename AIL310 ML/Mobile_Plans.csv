@@ -1,0 +1,11 @@
+Mobile_Plan_Type,Mobile_Operator,Data_Usage_GB,Total_Cost_INR,Data_Speed_Mbps,Plan_Category
+Prepaid,Airtel,2.5,249,15,Affordable
+Postpaid,Jio,3,399,12,Expensive
+Prepaid,Vodafone Idea,1.8,199,10,Affordable
+Postpaid,Airtel,2.8,349,14,Expensive
+Prepaid,Jio,2.2,249,13,Affordable
+Postpaid,Vodafone Idea,3.5,449,11,Expensive
+Prepaid,Airtel,2,199,12,Affordable
+Postpaid,Jio,2.5,349,13,Expensive
+Prepaid,Vodafone Idea,1.5,149,9,Affordable
+Postpaid,Airtel,3.2,449,14,Expensive
