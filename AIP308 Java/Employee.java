@@ -40,11 +40,6 @@ public class Employee
 		System.out.println("Salary : ");
 		salary = sc.nextDouble();
 	}
-	void Display(double SalaryYear,double SalaryRised,double RisedSalaryNextYear)
-	{
-		System.out.println(firstName.concat(" ").concat(lastName) );
-		System.out.println("\nSalary Per Month:" + salary + "\nSalary per Year:" + SalaryYear + "\nRised Salary in Next Year:" + SalaryRised + "\nTotal Salary Rised next Year:" + RisedSalaryNextYear);
-	}
 	double CalculateSalary()
 	{
 		double SalaryYear = (salary * 12);
@@ -70,7 +65,7 @@ public class Employee
 	}
 	public static void main(String[]args)
 	{
-		Employee e1 = new Employee("Rajesh", "Wagle.", 45000);
+		Employee e1 = new Employee("Rajesh", "Wagle", 45000);
 		System.out.println("\nFor First Employee : " + "\nName : " + e1.getFirst() + " " + e1.getLast());
 		System.out.println("Salary : " + e1.getSalary() + "\nAnnual Income : " + e1.CalculateSalary() +"\nRised Salary after a yr. : " + e1.RiseSalary());
 		
