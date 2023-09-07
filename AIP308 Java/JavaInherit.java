@@ -37,7 +37,7 @@ class ScientificBook extends Book
 	}
 	public void displayInfo()
 	{
-		System.out.println("Book Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nArea : " + area);
+		System.out.println("\nBook Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nArea : " + area);
 	}
 }
 class ComicBook extends Book
@@ -60,8 +60,9 @@ public class JavaInherit
 	public static void main(String[] args)
 	{
 		ScientificBook sb = new ScientificBook("Cosmos", "Carl Sagan", 396, "978-0-345-53943-4", "Cosmology");
-		ComicBook cb = new ComicBook("Chintoo", "Charuhas Pandit", 57, "168-759-436182", "Purandare Prakashan", 60);
 		sb.displayInfo();
+		
+		ComicBook cb = new ComicBook("Chintoo", "Charuhas Pandit", 57, "168-759-436182", "Purandare Prakashan", 60);
 		cb.displayInfo();
 	}
 }
