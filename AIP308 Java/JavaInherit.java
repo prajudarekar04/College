@@ -1,10 +1,3 @@
-/*
-Create a Class Book with (title, author, number of pages and isbn number) implement
-parametrized constructor to assign the data members. Create an a Class
-ScientificBook which inherits Book and have area as a new data member,
-ComicBook which inherits Book and have publisher name & price as a new data member,
-access the data members and methods in derived class to implement the inheritance.
-*/
 class Book
 {
 	String Title;
@@ -37,7 +30,7 @@ class ScientificBook extends Book
 	}
 	public void displayInfo()
 	{
-		System.out.println("\nBook Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nArea : " + area);
+		System.out.println("Book Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nArea : " + area);
 	}
 }
 class ComicBook extends Book
@@ -52,7 +45,7 @@ class ComicBook extends Book
 	}
 	public void displayInfo()
 	{
-		System.out.println("Book Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nPublisher : " + publisher + "\nPrice : " + price);
+		System.out.println("\nBook Information\nTitle of Book : " + Title + "\nAuthor : " + author + "\nNo. of Pages : " + noOfPages + "\nISBN No. : " + ISBN + "\nPublisher : " + publisher + "\nPrice : " + price);
 	}
 }
 public class JavaInherit
@@ -61,7 +54,6 @@ public class JavaInherit
 	{
 		ScientificBook sb = new ScientificBook("Cosmos", "Carl Sagan", 396, "978-0-345-53943-4", "Cosmology");
 		sb.displayInfo();
-		
 		ComicBook cb = new ComicBook("Chintoo", "Charuhas Pandit", 57, "168-759-436182", "Purandare Prakashan", 60);
 		cb.displayInfo();
 	}
