@@ -1,77 +1,73 @@
-//Program for implementation of Constructor-Set-Get_Method for Employee Class
-/*
-Write a program to develop class employee with constructor to initialize instance variables.
-Provide Set method and Get method for instance variables.
-Also provide a method to raise Salary of each employee by 10%.
-*/
-import java.util.*;	//for Scanner class
+import java.util.*;
 public class Employee
 {
-	String firstName;
-	String lastName;
-	double salary;
+	String FirstName;
+	String LastName;
+	double Salary;
 	Employee()
 	{
-		firstName = null;
-		lastName = null;
-		salary = 0.0;
+		FirstName = null;
+		LastName = null;
+		Salary = 0.0;
 	}
-	Employee(String fnm, String lnm, double income)
+	void SetFirst()
 	{
-		firstName = fnm;
-		lastName = lnm;
-		salary = income;
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter First Name:");
+		FirstName = sc.nextLine();
 	}
-	void setFirst()
+	void SetLast()
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("\nFirst Name : ");
-		firstName = sc.nextLine();
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter Last Name:");
+		LastName = sc.nextLine();
 	}
-	void setLast()
+	void SetSalary()
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Last Name : ");
-		lastName = sc.nextLine();
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter Salary:");
+		Salary = sc.nextDouble();
 	}
-	void setSalary()
+	String GetFirst() { return FirstName; }
+	String GetLast() { return LastName; }
+	double GetSalary() { return Salary; }
+	void Display(double SalaryYear,double SalaryRised,double RisedSalaryNextYear)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Salary : ");
-		salary = sc.nextDouble();
+		System.out.println("\n" + FirstName.concat(" ").concat(LastName));
+		System.out.println("Salary Per Month:" + Salary);
+		System.out.println("Salary per Year:" + SalaryYear);
+		System.out.println("Monthly Rised Salary in Next Year:" + SalaryRised);
+		System.out.println("And Yearly:" + (SalaryRised*12));
 	}
 	double CalculateSalary()
 	{
-		double SalaryYear = (salary * 12);
+		double SalaryYear = (Salary * 12);
 		return SalaryYear;
 	}
 	Double RiseSalary()
 	{
-		double RisedSalary = ((salary *10)/100)+salary;
-		salary = RisedSalary;
+		double RisedSalary = ((Salary *10)/100) + Salary;
 		return RisedSalary;
 	}
-	String getFirst()
+	public static void main(String []args)
 	{
-		return firstName;
-	}
-	String getLast()
-	{
-		return lastName;
-	}
-	double getSalary()
-	{
-		return salary;
-	}
-	public static void main(String[]args)
-	{
-		Employee e1 = new Employee("Rajesh", "Wagle", 45000);
-		System.out.println("\nFor First Employee : " + "\nName : " + e1.getFirst() + " " + e1.getLast());
-		System.out.println("Salary : " + e1.getSalary() + "\nAnnual Income : " + e1.CalculateSalary() +"\nRised Salary after a yr. : " + e1.RiseSalary());
-		
-		Employee e2 = new Employee();
-		e2.setFirst();	e2.setLast();	e2.setSalary();
-		System.out.println("\nFor Second Employee : " + "\nName : " + e2.getFirst() + " " + e2.getLast());
-		System.out.println("Salary : " + e2.getSalary() + "\nAnnual Income : " + e2.CalculateSalary() +"\nRised Salary after a yr. : " + e2.RiseSalary());
+		Employee a = new Employee();
+		Employee b = new Employee();
+		double SalaryYear = 0.0;
+		double SalaryRise = 0.0;
+		double RisedSalaryNextYear = 0.0;
+		a.SetFirst();
+		a.SetLast();
+		a.SetSalary();
+		System.out.println("\nEnter data for Second Employee");
+		b.SetFirst();
+		b.SetLast();
+		b.SetSalary();
+		SalaryYear = a.CalculateSalary();
+		SalaryRise = a.RiseSalary();
+		a.Display(SalaryYear, SalaryRise,RisedSalaryNextYear);
+		SalaryYear = b.CalculateSalary();
+		SalaryRise = b.RiseSalary();
+		b.Display(SalaryYear, SalaryRise,RisedSalaryNextYear);
 	}
 }
